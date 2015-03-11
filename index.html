@@ -27,12 +27,64 @@ class: center, middle
 
 # Instalacja na Windows
 
+Użyj installera z oficjalnej strony http://golang.org. Installer ustawi też zmienne środowiskowe takie jak %GOROOT% oraz doda %GOROOT%\bin do %PATH%.
+
+Jeśli rozpakowujesz zip, sam musisz te zmienne ustawić.
+
+Niezależne czy używasz installera czy zip, trzeba ustawić zmienną %GOPATH% gdzie będą twoje projekty oraz inne zainstalowane z sieci.
+
+```
+Start > wpisujemy "Eviron" i wybieramy "Edit environment variables for your account".
+```
+
+Dla polskiej wersji Windows trzeba zapewne wpisać "Środowisko" i wybrać odpowiednią pozycję.
+
+Tam należy dodać zmienną `%GOPATH%` która będzie wskazywała na miejsce twoich projektów, np. `%GOPATH%` będzie ustawione na `%USERPROFILE%\projects\go`
+
+Tworzymy także katalog %USERPROFILE%\projects\go.
+
+https://golang.org/doc/install#windows
+
 ---
 
+# Instalacja na Ubuntu
 
-# Instalacja na Linuxie
+Domyślna wersja w ubuntu jest dość stara.
+
+Wersja z ppa:gophers/go https://launchpad.net/~gophers/+archive/ubuntu/go/+packages też nie jest aktualna. A jest to zalecane repo na stronie https://github.com/golang/go/wiki/Ubuntu.
+
+Tutaj też jest stara wersja https://launchpad.net/~evarlast/+archive/ubuntu/golang1.4.
+
+Tu jest dosyć nowa https://launchpad.net/~doko/+archive/ubuntu/toolchain/+build/7049521.
+
+https://github.com/moovweb/gvm/ jako ostatnią wersję ma 1.4 a najnowsza jest 1.4.2.
+
+Można chyba jednak zdecydować się na instalację manualną, gdyż nie jest trudna.
 
 ---
+
+# Instalacja manualna na Ubuntu
+
+Z https://golang.org/dl/ pobieramy najnowszą wersję.
+
+```
+wget https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
+sudo tar xv go1.4.2.linux-amd64.tar.gz -C /usr/local
+#dodajemy do PATH
+sudo sh -c "echo export 'PATH=\$PATH:/usr/local/go/bin' >> /etc/profile"
+source /etc/profile
+#dodajemy GOPATH
+mkdir ~/projects/go
+echo 'export GOPATH=~/projects/go' >> ~/.bashrc
+echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
+source ~/.bashrc
+#sprawdzamy
+go env
+```
+
+GOROOT należy ustawić jeśli go zainstalowaliśmy w innej lokalizacji niż domyślna `/usr/local`.
+
+https://golang.org/doc/install#tarball
 
     </textarea>
     <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
