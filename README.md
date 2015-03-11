@@ -9,8 +9,6 @@
   - zabawa z kodem czyli w sumie fmt, wskaźniki, dlaczego nie ma tablic itp.
   - przykład i jazda, przyklad i jazda
 
-Za inspiracje do poznaniwa go użyłbym po prostu http://golang.org.pl/
-
-Bo:
- - Jest dość aktalne
- - Kto nie zdąży, skończy w domu.
+Za inspiracje do poznaniwa go użyłbym po prostu http://golang.org.pl/ bo:
+  - Jest dość aktalne
+  - Kto nie zdąży, skończy w domu.
