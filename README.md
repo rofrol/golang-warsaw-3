@@ -8,7 +8,7 @@
   - Tutaj zapytałbym ludzi jaki jest ich poziom i czego by się chcieli nauczyć... jeśli wiekszość powie że nie wiele, to tak bym postąpił dalej.
   - 20 min
     - zasady tworzenia pakietów
-
+        
         $ mkdir -p $GOPATH/src/github.com/user
         $ mkdir $GOPATH/src/github.com/user/hello
         $ vim $GOPATH/src/github.com/user/hello/main.go
